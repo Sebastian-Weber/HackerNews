@@ -1,6 +1,9 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { SpinnerCircular, SpinnerCircularFixed, SpinnerCircularSplit, SpinnerDiamond, SpinnerDotted, SpinnerInfinity, SpinnerRomb, SpinnerRound, SpinnerRoundFilled, SpinnerRoundOutlined } from 'spinners-react';
+
+<SpinnerCircular />
 
 function App() {
 
@@ -49,10 +52,52 @@ function App() {
   )
 
   return (
+	<>
 		<div className="my-4 md:my-8 lg:my-12 mx-auto max-w-[960px] bg-orange-100">
 			<div className="bg-amber-500 p-1">Hello HackerNews ...</div>
 			{!error.message ? newsListe : errorMessage}
 		</div>
+		<div className="mx-auto max-w-[960px] bg-blue-100">
+			{/* <div>
+				<SpinnerCircular />
+			</div>
+			<div>
+				<SpinnerCircularFixed />
+			</div>
+			<div>
+				<SpinnerCircularSplit />
+			</div>
+			<div>
+				<SpinnerRound />
+			</div>
+			<div>
+				<SpinnerRoundOutlined />
+			</div>
+			<div>
+				<SpinnerRoundFilled />
+			</div>
+			<div>
+				<SpinnerDotted />
+			</div>
+			<div>
+				<SpinnerInfinity />
+			</div>
+			<div>
+				<SpinnerDiamond />
+			</div> */}
+		</div>
+		<div className="grid grid-cols-3 grid-rows-3 gap-3 mx-auto max-w-[960px] bg-blue-100">
+			<div ><SpinnerCircular /></div>
+			<div ><SpinnerCircularFixed /></div>
+			<div ><SpinnerCircularSplit /></div>
+			<div className="col-start-3 row-start-2"><SpinnerRound /></div>
+			<div className="col-start-2 row-start-2"><SpinnerRoundOutlined /></div>
+			<div className="col-start-1 row-start-2"><SpinnerRoundFilled /></div>
+			<div className="row-start-3"><SpinnerDotted /></div>
+			<div className="row-start-3"><SpinnerInfinity /></div>
+			<div className="row-start-3"><SpinnerDiamond /></div>
+		</div>
+	</>	
   )
 }
 
