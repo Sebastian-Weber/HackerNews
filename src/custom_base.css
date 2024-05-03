@@ -1,0 +1,7 @@
+body {
+  @apply px-2 md:px-4;
+}
+
+h2 {
+  @apply md:text-lg font-medium;
+}

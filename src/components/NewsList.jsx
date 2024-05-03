@@ -1,63 +1,68 @@
 import { useEffect, useState } from "react";
+import { SpinnerCircular } from 'spinners-react';
+import NewsEntry from "./NewsEntry.jsx";
+import Pagination from "./Pagination.jsx";
 import axios from "axios";
+
 const apiFragment = 'https://hn.algolia.com/api/v1/';
 
-
-function NewsList({ searchQuery }) {
+function NewsList({searchQuery}) {
 
 	const [newsEntries, setNewsEntries] = useState([]);
-	const [pageData, setPageData] = useState({});
+	const [paginationData, setPaginationData] = useState({});
+	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState([]);
 
 	const getNewsItems = async (endpoint) => {
 		try {
+			setLoading(true);
 			const response = await axios.get(apiFragment + endpoint);
-			console.log(response.data);
 			setNewsEntries(response.data.hits);
-			setPageData({
+			setPaginationData({
 				page: response.data.page,
 				entriesPerPage: response.data.hitsPerPage,
-				maxPages: response.data.nbPages
+				maxPages: response.data.nbPages,
+				items: response.data.hits.map((i, k) => k)
 			});
 		}
 		catch (error) {
-			//console.error(error.message);
 			setError(error);
+		}
+		finally {
+			setLoading(false);
 		}
 	}
 
 	useEffect(() => {
-
-		if (searchQuery !== '') {
-			getNewsItems(`search?query=${searchQuery}&hitsPerPage=20`);
-		}
-
-		else {
-			getNewsItems('search_by_date?tags=story&hitsPerPage=20');
-		}
-
+		if (!searchQuery) getNewsItems('search_by_date?tags=story&hitsPerPage=20').then();
+		if (searchQuery !== '') getNewsItems(`search?${searchQuery}&hitsPerPage=20`).then();
 	}, [searchQuery]);
 
-	const regularOutput = (
+	const displayList = (
 		<div className="list-container">
-			{newsEntries.map(item => (
-				<a href={item.url}
-					 target="_blank"
-					 className="block p-2 odd:bg-white/60 hover:underline"
-					 key={item.objectID}>
-					 {item.updated_at} --- {item.title}
-				</a>
-			))}
-		</div>
-	)
+			{loading ? (
+				<div className="flex items-center justify-around min-h-[400px]">
+					<SpinnerCircular color="#3E2A2A" thickness={100} size={60} />
+				</div>
+			) : (
+				<>
+					{newsEntries.map(item => (
+						<NewsEntry {...item} key={item.objectID}/>
+					))}
 
-	const errorMessage = <div className="p-8 text-center">{error.message}</div>;
+				</>
+			)}
+
+		</div>
+	);
+
+	const displayError = (
+		<div className="p-8 text-center">{error.message}</div>
+	);
 
 	return (
 		<>
-			<div className="list-container">
-				{!error.message ? regularOutput : errorMessage}
-			</div>
+			{!error.message ? displayList : displayError}
 		</>
 	)
 
