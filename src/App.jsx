@@ -10,13 +10,12 @@ import ClarasApp from './components/ClarasApp';
 function App() {
   return (
     <>
-      <div className="my-4 md:my-8 lg:my-12 mx-auto max-w-[960px] bg-orange-100">
-        <div className="bg-amber-500 p-1">Thomas Hello HackerNews ...</div>
+      <div className="my-4 md:my-8 lg:my-12 mx-auto max-w-[960px] bg-sky-100">
         <div className="p-1">
           <Header />
           {/* <HackerNews /> */}
           <ClarasApp />
-          <HackerNewsSandbox />
+          {/* <HackerNewsSandbox /> */}
           {/* <BusySpinner /> */}
           {/* <Pagination /> */}
         </div>

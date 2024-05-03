@@ -75,7 +75,7 @@ function HackerNewsAdvanced() {
 					<p className="mb-3 font-semibold text-gray-600 dark:text-white">Last update: {entry.updated_at}</p>
 					<p className="mb-3 font-semibold text-gray-600 dark:text-white">Tags: {entry._tags}</p>
 					<p className="mb-3 font-semibold text-gray-600 dark:text-white">Tags:</p>
-					{/* <br/> */}
+
 					<div className="flex flex-nowrap">
 					<a href={entry.url} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-500 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
 						Read more
@@ -87,7 +87,8 @@ function HackerNewsAdvanced() {
 					<br/>
 					<div className="flex flex-nowrap">
 						<a className="inline-flex items-center mx-4 px-3 py-2 text-sm font-medium text-center text-white bg-sky-500 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
-							Comments {entry.num_comments}
+							Comments 
+							{entry.num_comments}
 						</a>
 						<a className="inline-flex items-center mx-4 px-3 py-2 text-sm font-medium text-center text-white bg-sky-500 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
 						{entry._tags}
