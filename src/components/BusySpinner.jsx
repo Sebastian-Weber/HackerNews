@@ -27,6 +27,13 @@ function BusySpinner() {
   return (
 	<>
 
+	    {/* Separator */}	
+		<div className="flex flex-nowrap bg-orange-400" >
+			<div class="my-4">
+			</div>
+			<h1 className="mb-4 pl-5 my-4 text-4xl font-sans font-regular leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">Sebastian's BusySpinners</h1>
+		</div>
+
 		{/* Busy spinners in grid with 3 columns and 3 rows  */}
 		<div className="grid grid-cols-3 grid-rows-3 gap-3 mx-auto max-w-[960px] bg-sky-200">
 			<div ><SpinnerCircular /></div>

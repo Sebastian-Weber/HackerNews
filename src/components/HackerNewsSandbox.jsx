@@ -118,15 +118,21 @@ function HackerNewsAdvanced() {
 
   return (
 	<>
-		{/* HackerNews Grid */}
-		<div className="my-4 md:my-8 lg:my-12 mx-auto max-w-[960px]">
+
+    {/* Separator */}	
+    <div className="flex flex-nowrap bg-orange-400" >
+			<h1 className="mb-4 pl-5 my-4 text-4xl font-sans font-regular leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">Sebastian's Sandbox</h1>
+	</div>
+
+		{/* HackerNews Columns Grid */}
+		<div className="mx-auto max-w-[960px]">
 		{/* HackerNews Header */}	
-		<div className="flex flex-nowrap bg-gray-800" >
-			<div class="my-4">
-				<img class="py-4 pr-2 pl-6 size-full md:size-auto" src="./src/assets/images/react-logo.svg"></img>
+    	<div className="flex flex-nowrap bg-gray-800" >
+			<div class="items-center">
+				<img class="py-4 pr-2 pl-4 size-full md:size-auto" src="./src/assets/images/react-logo.svg"></img>
 			</div>
-			<h1 className="mb-4 my-4 text-4xl font-sans font-regular leading-none tracking-tight text-gray-200 md:text-5xl lg:text-6xl dark:text-white">HackerNews|</h1>
-			<h1 className="mb-4 my-4 py-1 text-4xl font-mono font-semibold leading-none tracking-tight text-gray-200 md:text-5xl lg:text-6xl dark:text-white">Advanced</h1>
+			<h1 className="mb-4 my-4 text-4xl font-sans font-regular leading-none tracking-tight text-gray-200 md:text-5xl lg:text-6xl dark:text-white">Hacker|</h1>
+			<h1 className="mb-4 my-4 py-1 text-4xl font-mono font-semibold leading-none tracking-tight text-gray-200 md:text-5xl lg:text-6xl dark:text-white">News Sandbox</h1>
 		</div>
 			{!error.message ? newsListe : errorMessage}
 		</div>

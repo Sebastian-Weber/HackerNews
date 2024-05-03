@@ -7,8 +7,15 @@ function Pagination() {
 
   return (
 	<>
+	    {/* Separator */}	
+		<div className="flex flex-nowrap bg-orange-400" >
+			<div class="my-4">
+			</div>
+			<h1 className="mb-4 pl-5 my-4 text-4xl font-sans font-regular leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">Sebastian's Pagination</h1>
+		</div>
+		
 		{/* Pagination example 1 starts here*/}
-		<div className="flex items-center justify-center">
+		{/* <div className="flex items-center justify-center">
 			<nav aria-label="Page navigation example">
 				<ul class="flex items-center -space-x-px h-8 text-sm">
 					<li>
@@ -44,7 +51,7 @@ function Pagination() {
 					</li>
 				</ul>
 				</nav>
-			</div>	
+			</div>	 */}
 
 			{/* Pagination example 2 starts here*/}
 			<div className="flex items-center justify-center">

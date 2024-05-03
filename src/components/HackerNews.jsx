@@ -85,14 +85,9 @@ function HackerNews() {
 
   return (
 	<>
-		{/* HackerNews Liste */}
 		<div>
-
 			{!error.message ? newsListe : errorMessage}
 		</div>
-
-
-
 
 	</>	
   )
