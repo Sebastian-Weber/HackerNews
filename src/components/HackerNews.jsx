@@ -13,7 +13,7 @@ function HackerNews() {
 		const getNewsItems = async (endpoint) => {
 
 			try {
-				const response = await axios.get('http://hn.algolia.com/api/v1/search?query=react');
+				const response = await axios.get('http://hn.algolia.com/api/v1/search?query=react&tags=story');
 
 				//console.log(response.data.hits);
 				setNewsEntries(response.data.hits);

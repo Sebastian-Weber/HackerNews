@@ -4,8 +4,9 @@ import BusySpinner from './components/BusySpinner';
 import HackerNews from './components/HackerNews';
 import HackerNewsSandbox from './components/HackerNewsSandbox';
 import Header from './components/Header';
-import Pagination from './components/Pagination';
 import ClarasApp from './components/ClarasApp';
+import Tryout from './components/Tryout.jsx';
+
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <ClarasApp />
           {/* <HackerNewsSandbox /> */}
           {/* <BusySpinner /> */}
-          {/* <Pagination /> */}
+          <Tryout />
         </div>
       </div>
     </>
