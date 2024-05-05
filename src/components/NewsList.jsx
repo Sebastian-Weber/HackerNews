@@ -50,7 +50,7 @@ function NewsList({searchQuery}) {
 						{newsEntries.map(entry => (
 						<div className="p-6 my-3 mx-1 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-						{/* Generate heading with link for entry */}
+						{/* Renders heading with link */}
 							<div key={entry.objectID} className="news-item">
 							<h5 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
 							<a
@@ -66,10 +66,10 @@ function NewsList({searchQuery}) {
 							<br/>
 							<p className="font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis a minus quae aspernatur, commodi sunt suscipit iure laboriosam ab minima saepe aut necessitatibus autem ullam illum recusandae ut ducimus eum.</p>
 							<br/>
-							{/* ButtonBar component: renders a row of buttons */}
+							{/* renders a row of buttons */}
 							<div className="flex flex-nowrap justify-items-start">
 
-								{/* Read more button */}
+								{/* Renders read more button */}
 								<div className="mr-2">
 									<a href={entry.url}
 									target="_blank"
@@ -85,7 +85,7 @@ function NewsList({searchQuery}) {
 									</a>
 								</div> 
 
-								{/* comments button */}
+								{/*  renders comments button */}
 								<div className="mr-2">
 									<a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
 									Comments {entry.num_comments}
@@ -97,7 +97,8 @@ function NewsList({searchQuery}) {
 									</a>
 								</div>
 
-								{/* author button */}
+
+								{/* renders author button */}
 								<div className="mr-2">
 								<a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
 								{entry.author}

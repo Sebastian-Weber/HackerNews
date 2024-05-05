@@ -38,9 +38,9 @@ function Header(props) {
 				<h1 className="mb-4 my-4 pt-1 text-4xl font-mono font-semibold leading-none tracking-tight text-gray-200 md:text-5xl lg:text-6xl dark:text-white">News</h1>
 			</div>
 		{/* Header nav bar */}	
-		<div className="my-2 mx-5 flex flex-nowrap justify-between row">
+		<div className="my-2 mx-2 flex flex-nowrap justify-between row">
 			<div className="flex flex-nowrap row justify-start">
-				<div className="flex pl-9">
+				<div className="flex px-12">
 					<h5 className="text-1xl font-normal tracking-tight text-gray-200 dark:text-white">
 						<a className="px-2 cursor-pointer" onClick={handleNew}>| most recent |</a>
 					</h5>
@@ -54,7 +54,7 @@ function Header(props) {
 			</div>
 			<div className="flex flex-nowrap row justify-end">
 				<form onSubmit={handleSubmit}>
-					<div className="flex pr-2">
+					<div className="flex px-4">
 						<input type="text" placeholder="Search ..." ref={inputRef} />
 					</div>
 				</form>
