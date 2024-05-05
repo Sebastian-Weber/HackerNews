@@ -19,18 +19,22 @@ function NewsEntry(props) {
 	);
 
 	return (
-		<div className="p-2 even:bg-orange-100 odd:bg-orange-50">
-			<h2>{props.url ? title_link : title}</h2>
-			<span className="block text-sm">
-				Author: <a href="#" className="underline">{props.author}</a>&nbsp; |&nbsp;
-				Post date: {stringDate}&nbsp; | &nbsp;
-				<a href="#" className="underline">{props.num_comments} {props.num_comments === 1 ? 'Comment' : 'Comments'}</a>&nbsp; |&nbsp;
-				ID {props.story_id}
-			</span>
-			{props.story_text && <StoryText html={props.story_text}/>}
-		</div>
-	)
+		<>
 
+			<div className="p-2 even:bg-orange-100 odd:bg-orange-50">
+				<h2>{props.url ? title_link : title}</h2>
+					<span className="block text-sm">
+						Author: 
+							<a href="#" className="underline">{props.author}
+							</a>&nbsp; |&nbsp;Post date: {stringDate}&nbsp; | &nbsp;
+							<a href="#" className="underline">{props.num_comments} {props.num_comments === 1 ? 'Comment' : 'Comments'}
+							</a>&nbsp; |&nbsp;ID {props.story_id}
+					</span>
+				{props.story_text && <StoryText html={props.story_text}/>}
+			</div>
+
+		</>
+	)
 }
 
 export default NewsEntry;
