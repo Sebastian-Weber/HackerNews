@@ -2,8 +2,9 @@ import './App.css';
 import { useState } from "react";
 import Header from "./components/Header.jsx";
 import NewsList from "./components/NewsList.jsx";
-import Pagination from "./components/Pagination.jsx"
-
+import Pagination from './components/Pagination.jsx';
+import TryoutPagination from './components/TryoutPagination.jsx';
+import TryoutPost from './components/TryoutPost.jsx';
 
 
 function App() {

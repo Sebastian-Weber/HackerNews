@@ -25,6 +25,7 @@ function Header(props) {
 
 	return (
 		<>
+
 		{/* Header */}	
 		<div className="p-2 bg-gray-800 sticky top-0">
 
@@ -64,10 +65,7 @@ function Header(props) {
 		</div>
 
 		<br/>
-		
-
-
-
+	
 		</>	
 	)
 }

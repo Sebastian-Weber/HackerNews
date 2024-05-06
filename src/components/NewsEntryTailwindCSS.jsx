@@ -29,16 +29,16 @@ function NewsEntry(props) {
 
 					{/* renders a publishing date */}
 					<div className="pt-3 flex flex-nowrap justify-between">
-						<a href="#" className="inline-flex underline items-center py-2 text-sm font-medium text-center text-gray-400">
+						<p className="inline-flex items-center py-2 text-sm font-medium text-center text-gray-400">
 							{stringDate}
-						</a>
+						</p>
 					</div>
 
 					{/* renders an ID */}
 					<div className="pt-3 flex flex-nowrap justify-between">
-						<a href="#" className="inline-flex underline items-center px-3 py-2 text-sm font-medium text-center text-gray-400">
+						<p className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-400">
 						ID:&nbsp;{props.story_id}
-						</a>
+						</p>
 					</div>
 
 					</div>

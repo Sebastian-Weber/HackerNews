@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { SpinnerCircular } from 'spinners-react';
+import axios from "axios";
 import NewsEntry from "./NewsEntry.jsx";
 import NewsEntryTailwindCSS from "./NewsEntryTailwindCSS.jsx";
-import axios from "axios";
-
 const apiFragment = 'https://hn.algolia.com/api/v1/';
 
 function NewsList({searchQuery}) {
