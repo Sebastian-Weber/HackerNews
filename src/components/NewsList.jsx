@@ -69,8 +69,6 @@ function NewsList({searchQuery}) {
 		</>
 	)
 
-	
-
 }
 
 export default NewsList;

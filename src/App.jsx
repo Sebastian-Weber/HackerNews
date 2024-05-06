@@ -3,9 +3,7 @@ import { useState } from "react";
 import Header from "./components/Header.jsx";
 import NewsList from "./components/NewsList.jsx";
 import Pagination from './components/Pagination.jsx';
-import TryoutPagination from './components/TryoutPagination.jsx';
-import TryoutPost from './components/TryoutPost.jsx';
-
+import Tryout from './components/TRYOUT/Tryout.jsx';
 
 function App() {
 
@@ -23,6 +21,7 @@ function App() {
 				<Header searchList={searchList} filterList={filterList} />
 				<NewsList searchQuery={searchQuery} />
 				<Pagination/>
+				<Tryout/>
 			</div>
 		</>
   )

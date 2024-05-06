@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import TryoutPost from './TryoutPost';
+import Pagination from './Pagination.jsx';
+import Post from './Post.jsx';
 
-function TryoutPagination() {
+function App() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -11,7 +12,10 @@ function TryoutPagination() {
     const fetchPosts = async () => {
       setLoading(true);
       try {
+
         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        // const response = await fetch("https://hn.algolia.com/api/v1/");
+        
         const data = await response.json();
         setPosts(data);
         setLoading(false)
@@ -32,11 +36,11 @@ function TryoutPagination() {
 
   return (
     <>
-    <div className='container'>
-      <TryoutPost posts={currentPosts} loading={loading} />
-    </div>
-    </>
+        <Post posts={currentPosts} loading={loading} />
+        <Pagination length={posts.length} postsPerPage={postsPerPge} handlePagination={handlePagination} currentPage={currentPage} />
+      </>
+
   )
 }
 
-export default TryoutPagination;
+export default App
