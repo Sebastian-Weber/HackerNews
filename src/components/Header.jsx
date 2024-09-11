@@ -32,7 +32,7 @@ function Header(props) {
 		{/* Header */}	
 		<div className="p-2 bg-gray-800 sticky top-0">
 
-			<div className="flex row mx-4 my-4 items-center">
+			<div className="flex flex-row mx-4 my-4 items-center">
 				{/* Logo */}	
 					<div className="mb-4 my-4 size-12 bg-gray-100">
 						{/* <img class="my-4 pt-4 pr-2 pl-4 size-full md:size-auto" src="./src/assets/react.svg"></img> */}
@@ -46,22 +46,22 @@ function Header(props) {
 		{/* Header nav bar */}	
 		<div className="my-2 mx-2 flex justify-between row">
 			<div className="flex row justify-start">
-				<div className="flex px-2">
-					<h5 className="text-1xl font-normal tracking-tight text-gray-200 dark:text-white">
+				<div className="flex flex-wrap px-2">
+					<h5 className="flex flex-row text-1xl font-normal tracking-tight text-gray-200 dark:text-white">
 						<a className="px-2 cursor-pointer" onClick={handleNew}>| most recent |</a>
 					</h5>
-					<h5 className="text-1xl font-normal tracking-tight text-gray-200 dark:text-white">
+					<h5 className="flex flex-row text-1xl font-normal tracking-tight text-gray-200 dark:text-white">
 						<a className="px-2 cursor-pointer" onClick={handleAsk}>| ask HN |</a>
 						</h5>
-					<h5 className="text-1xl font-normal tracking-tight text-gray-200 dark:text-white">
+					<h5 className="flex flex-row text-1xl font-normal tracking-tight text-gray-200 dark:text-white">
 						<a className="px-2 cursor-pointer" onClick={handleShow}>| archive |</a>
 					</h5>
 				</div>
 			</div>
-			<div className="flex row justify-end">
+			<div className="flex flex-row justify-end">
 				<form onSubmit={handleSubmit}>
-					<div className="flex px-4">
-						<input type="text" placeholder="&nbsp;Search ..." ref={inputRef}/>
+					<div className="px-4">
+						<input class="w-28 md:min-w-36 lg:min-w-44" type="text" placeholder="&nbsp;Search ..." ref={inputRef}/>
 					</div>
 				</form>
 			</div>
