@@ -22,7 +22,7 @@ function NewsEntry(props) {
 		<>
 
 			{/* Renders card layout for news entry */}
-			<div className="p-3 px-6 my-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+			<div className="p-3 px-6 mb-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
 				{/* renders a horizontal bar */}
 				<div className="flex flex-nowrap justify-start">
@@ -44,16 +44,16 @@ function NewsEntry(props) {
 					</div>
 
 				{/* Renders a heading and makes it a link */}
-				<h2 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+				<h2 className="text-2xl font-semibold tracking-tight  text-gray-300">
 					{props.url ? title_link : title}
 				</h2>
-				<br/>
+
 
 				{/* Renders a paragraph with lorem ipsum  */}
-				<p className="font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis a minus quae aspernatur, commodi sunt suscipit iure laboriosam ab minima saepe aut necessitatibus autem ullam illum recusandae ut ducimus eum.</p>
+				{/* <p className="font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis a minus quae aspernatur, commodi sunt suscipit iure laboriosam ab minima saepe aut necessitatibus autem ullam illum recusandae ut ducimus eum.</p> */}
 
 				{/* Renders a paragraph with story text  */}
-				<p>{props.story_text && <StoryText html={props.story_text}/>}</p>
+				<p class="text-gray-300">{props.story_text && <StoryText html={props.story_text}/>} </p>
 				<br/>
 
 				{/* renders a horizontal bar */}
@@ -61,7 +61,7 @@ function NewsEntry(props) {
 
 					{/* renders an author button */}
 					<div className="mr-2">
-						<a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
+						<a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-300 bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
 						{props.author}
 							<div className="flex flex-nowrap justify-between">
 								<svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
@@ -73,7 +73,7 @@ function NewsEntry(props) {
 
 					{/* renders a comments button */}
 					<div className="mr-2">
-						<a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
+						<a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-300 bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
 						{props.num_comments}
 							<div className="flex flex-nowrap justify-between">
 								<svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">

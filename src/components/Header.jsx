@@ -1,3 +1,6 @@
+// Logos
+import LogoHackernews from '/src/assets/logos/logo-hackernews.svg'
+
 import { useRef } from "react";
 function Header(props) {
 
@@ -33,7 +36,7 @@ function Header(props) {
 				{/* Logo */}	
 					<div className="mb-4 my-4 size-12 bg-gray-100">
 						{/* <img class="my-4 pt-4 pr-2 pl-4 size-full md:size-auto" src="./src/assets/react.svg"></img> */}
-						<img className="" src="./src/assets/logo-hackernews.svg"></img>
+						<img src={LogoHackernews}></img>
 					</div>
 
 				{/* Heading */}

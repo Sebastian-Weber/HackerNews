@@ -45,9 +45,9 @@ function NewsList({searchQuery}) {
 				</div>
 			) : (
 				<>
-					{newsEntries.map(item => (
+					{/* {newsEntries.map(item => (
 						<NewsEntry {...item} key={item.objectID}/>
-					))}
+					))} */}
 
 					{newsEntries.map(item => (
 						<NewsEntryTailwindCSS {...item} key={item.objectID}/>

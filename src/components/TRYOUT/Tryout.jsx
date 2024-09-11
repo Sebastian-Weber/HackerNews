@@ -36,8 +36,8 @@ function App() {
 
   return (
     <>
-        <Post posts={currentPosts} loading={loading} />
-        <Pagination length={posts.length} postsPerPage={postsPerPge} handlePagination={handlePagination} currentPage={currentPage} />
+        {/* <Post posts={currentPosts} loading={loading} />
+        <Pagination length={posts.length} postsPerPage={postsPerPge} handlePagination={handlePagination} currentPage={currentPage} /> */}
       </>
 
   )

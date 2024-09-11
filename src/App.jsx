@@ -17,11 +17,11 @@ function App() {
 
   return (
 		<>
-			<div className="my-4 md:my-8 lg:my-12 mx-auto max-w-[960px]">
+			<div className="my-0 md:my-0 lg:my-0 mx-auto max-w-[960px]">
 				<Header searchList={searchList} filterList={filterList} />
 				<NewsList searchQuery={searchQuery} />
 				<Pagination/>
-				<Tryout/>
+				{/* <Tryout/> */}
 			</div>
 		</>
   )
