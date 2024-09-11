@@ -1,5 +1,5 @@
 body {
-  @apply px-2 md:px-4 bg-slate-400;
+  @apply px-2 md:px-4 bg-stone-950;
 }
 
 h2 {
