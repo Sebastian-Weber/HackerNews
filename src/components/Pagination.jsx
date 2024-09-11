@@ -21,7 +21,7 @@ const Pagination = ({ postsPerPage, length, handlePagination, currentPage }) => 
         </div>
 
 			{/* Pagination example 2 starts here*/}
-			<div className="pb-6 flex items-center justify-center">
+			<div className="pb-6 flex items-center justify-center sticky bottom-0">
 				<nav aria-label="Page navigation example">
 					<ul class="flex items-center -space-x-px h-10 text-base">
 						<li>

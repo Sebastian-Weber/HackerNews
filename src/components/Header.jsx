@@ -40,8 +40,8 @@ function Header(props) {
 					</div>
 
 				{/* Heading */}
-					<h1 className="pl-2 mb-4 my-4 text-4xl font-sans font-regular leading-none tracking-tight text-gray-200 md:text-5xl lg:text-6xl dark:text-white">Hacker|</h1>
-					<h1 className="mb-4 my-4 pt-2 text-4xl font-mono font-semibold leading-none tracking-tight text-gray-200 md:text-5xl lg:text-6xl dark:text-white">News</h1>
+					<h1 className="pl-2 mb-4 my-4 text-4xl font-sans font-regular leading-none tracking-tight cursor-default select-none text-gray-200 md:text-5xl lg:text-6xl dark:text-white">Hacker|</h1>
+					<h1 className="mb-4 my-4 pt-2 text-4xl font-mono font-semibold leading-none tracking-tight cursor-default select-none text-gray-200 md:text-5xl lg:text-6xl dark:text-white">News</h1>
 			</div>
 		{/* Header nav bar */}	
 		<div className="my-2 mx-2 flex justify-between row">
@@ -61,7 +61,7 @@ function Header(props) {
 			<div className="flex flex-row justify-end">
 				<form onSubmit={handleSubmit}>
 					<div className="px-4">
-						<input class="w-28 md:min-w-36 lg:min-w-44" type="text" placeholder="&nbsp;Search ..." ref={inputRef}/>
+						<input class="w-28 md:min-w-36 lg:min-w-44 px-1 placeholder-gray-900 focus:ring-" type="text" placeholder="&nbsp;Search ..." ref={inputRef}/>
 					</div>
 				</form>
 			</div>
