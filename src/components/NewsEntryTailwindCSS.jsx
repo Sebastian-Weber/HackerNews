@@ -61,7 +61,7 @@ function NewsEntry(props) {
 
 					{/* renders an author button */}
 					<div className="mr-2">
-						<a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-300 bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
+						<a href="#" className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-center text-gray-300 bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-1 focus:outline-2 focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
 						{props.author}
 							<div className="flex flex-nowrap justify-between">
 								<svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
@@ -73,7 +73,7 @@ function NewsEntry(props) {
 
 					{/* renders a comments button */}
 					<div className="mr-2">
-						<a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-300 bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
+					<a href="#" className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-center text-gray-300 bg-sky-400 rounded-lg hover:bg-sky-600 focus:ring-1 focus:outline-2 focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
 						{props.num_comments}
 							<div className="flex flex-nowrap justify-between">
 								<svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
