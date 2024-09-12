@@ -44,7 +44,7 @@ function NewsEntry(props) {
 					</div>
 
 				{/* Renders a heading and makes it a link */}
-				<h2 className="text-2xl font-semibold tracking-tight  text-gray-300">
+				<h2 className="text-xl font-semibold tracking-tight  text-gray-300">
 					{props.url ? title_link : title}
 				</h2>
 
@@ -57,7 +57,7 @@ function NewsEntry(props) {
 				<br/>
 
 				{/* renders a horizontal bar */}
-				<div className="flex flex-nowrap justify-start">
+				<div className="flex flex-nowrap justify-start pb-2">
 
 					{/* renders an author button */}
 					<div className="mr-2">
@@ -84,7 +84,6 @@ function NewsEntry(props) {
 					</div>
 
 				</div>
-				<br/>
 
 			</div>	
 		</>
