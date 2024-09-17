@@ -1,5 +1,5 @@
 body {
-  @apply px-2 md:px-4 bg-fixed bg-gradient-to-br from-slate-900 to-sky-900;
+  @apply  bg-fixed bg-gradient-to-br from-slate-900 to-sky-900;
 }
 
 h2 {

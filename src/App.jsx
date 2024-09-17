@@ -20,7 +20,7 @@ function App() {
 			<div className="my-0 md:my-0 lg:my-0 mx-auto max-w-[960px]">
 				<Header searchList={searchList} filterList={filterList} />
 				<NewsList searchQuery={searchQuery} />
-				<Pagination/>
+				{/* <Pagination/> */}
 				{/* <Tryout/> */}
 			</div>
 		</>
